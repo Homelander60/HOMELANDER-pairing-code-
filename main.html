@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://telegra.ph/file/f0b104f674ebbea9f51b8.jpg"); /* Set the background image */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .btn {
+      --color: #8B0000;
+      --color2: rgb(10, 25, 30);
+      width: 150px; /* Set a fixed width for the buttons */
+      padding: 0.8em 1.75em;
+      background-color: #00008B;
+      border-radius: 10px;
+      border: .5px solid var(--color);
+      transition: .10s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      z-index: 1;
+      font-weight: 350;
+      font-size: 14px;
+      font-family: 'Comic Sans Ms, 'Comic Sans', cursive;
+      text-transform: uppercase;
+      color: var(--color);
+      margin-bottom: 10px; /* Add margin to separate buttons */
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform: skew(90deg) translate(-50%, -50%);
+      position: absolute;
+      inset: 50%;
+      left: 25%;
+      z-index: -1;
+      transition: .5s ease-out;
+      background-color: var(--color);
+    }
+
+    .btn::before {
+      top: -50%;
+      left: -25%;
+      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::before {
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::after {
+      transform: skew(45deg) translate(-50%, -50%);
+    }
+
+    .btn:hover {
+      color: var(--color2);
+    }
+
+    .btn:active {
+      filter: brightness(.7);
+      transform: scale(.98);
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="window.open(`/pair`)" class="btn">pair code</button>
+  <button onclick="window.open(`https://github.com/Homelander60`)" class="btn">github</button>
+  <button onclick="window.open(`https://www.instagram.com/mirai.art69`)" class="btn">instagram</button>
+
+</body>
+</html>
